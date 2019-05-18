@@ -4,6 +4,7 @@ import { RouterModule } from 'nest-router';
 import {TypeOrmModule} from '@nestjs/typeorm'
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+import { EmployeeEntity } from './entities/employee.entity';
 
 @Module({
   imports: [
@@ -20,6 +21,7 @@ import { AppService } from './app.service';
       retryAttempts: 2,
       retryDelay: 1000
     }),
+    TypeOrmModule.forFeature([EmployeeEntity]),
   ],
   controllers: [AppController],
   providers: [AppService],
