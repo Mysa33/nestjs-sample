@@ -6,10 +6,10 @@ export class EmployeeEntity {
     @PrimaryGeneratedColumn({name:'employee_id'})
     id: string;
 
-    @Column({type:'text', name:'lastName'})
+    @Column()
     last: string;
 
-    @Column({type:'text', name:'firstName'})
+    @Column()
     first: string;
 
     @CreateDateColumn()

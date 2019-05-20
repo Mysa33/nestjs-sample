@@ -1,6 +1,6 @@
-export class AmployeeDto{
+export class EmployeeDto{
 
-    public lastName : string;
-    public firstName: string;
+    public last : string;
+    public first: string;
 
 }

@@ -1,13 +1,18 @@
 import { Module } from '@nestjs/common';
-import { HttpModule} from '@nestjs/common';
+//mport { HttpModule} from '@nestjs/common';
 import { RouterModule } from 'nest-router';
-import {TypeOrmModule} from '@nestjs/typeorm'
+import {TypeOrmModule} from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+import { Repository, EntityRepository } from 'typeorm';
 import { EmployeeEntity } from './entities/employee.entity';
+import { EmployeeDto } from './dtos/employee.dtos';
+import { routes } from './routes.const';
 
 @Module({
   imports: [
+    TypeOrmModule.forFeature([EmployeeEntity]),
+    RouterModule.forRoutes(routes),
     TypeOrmModule.forRoot({
       type: 'mysql',
       host: 'localhost',
@@ -21,7 +26,9 @@ import { EmployeeEntity } from './entities/employee.entity';
       retryAttempts: 2,
       retryDelay: 1000
     }),
-    TypeOrmModule.forFeature([EmployeeEntity]),
+    Repository,
+    EmployeeEntity,
+    EmployeeDto
   ],
   controllers: [AppController],
   providers: [AppService],
