@@ -7,18 +7,23 @@ export class EmployeeEntity {
     id: string;
 
     @Column()
-    last: string;
+    lastName: string;
 
     @Column()
-    first: string;
+    firstName: string;
 
     @CreateDateColumn()
     createdAt: Date;
 
     @Column({type :'boolean', default: true})
-    active: boolean;
+    isActive: boolean;
+
+    @Column({type :'int', default: 20})
+    depId: number;
 
     @Column({type :'int', default: 0})
-    departement: number;
+    salary: number;
+
+    
 
 }

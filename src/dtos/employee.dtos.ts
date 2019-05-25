@@ -1,6 +1,12 @@
-export class EmployeeDto{
+import { ApiModelProperty } from "@nestjs/swagger";
 
-    public last : string;
-    public first: string;
+export class EmployeeDto{
+    
+    @ApiModelProperty()
+    public lastName:string;
+    @ApiModelProperty()
+    public firstName:string;
+    @ApiModelProperty()
+    public depId:number
 
 }
