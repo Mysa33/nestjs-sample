@@ -1,8 +1,8 @@
 import { Controller,Header, Get, Logger, Param, Post, Body, Put, Delete, HttpException, HttpStatus } from '@nestjs/common';
 import { AppService } from './app.service';
 import { EmployeeDto } from './dtos/employee.dtos';
-import { ApiResponse, ApiOperation } from '@nestjs/swagger';
-@Controller('api/v1/employees')
+import { ApiResponse, ApiOperation, ApiImplicitBody } from '@nestjs/swagger';
+@Controller('employees')
 export class AppController {
   constructor(private readonly _employeeService: AppService) {}
 
@@ -36,7 +36,7 @@ export class AppController {
   @ApiResponse({ status: 403, description: "Unauthorized" })
   @ApiResponse({ status: 404, description: "Not found" })
   @ApiResponse({ status: 500, description: "Internal server error" })
-  async getOne(@Param('employeeId')employeeId) {
+  async getOne(@Param('employeeId') employeeId:number) {
     Logger.log("get one employee", "AppController");
     const employee = await this._employeeService.getOne(employeeId);
     if(employee){
@@ -80,7 +80,7 @@ export class AppController {
   @ApiResponse({ status: 403, description: "Unauthorized" })
   @ApiResponse({ status: 404, description: "Not found" })
   @ApiResponse({ status: 500, description: "Internal server error" })
-  async update(@Param('employeeId')employeeId, @Body() employeeDto){
+  async update(@Param('employeeId')employeeId, @Body() employeeDto:EmployeeDto){
     Logger.log("Update an employee", "AppController");
     const employee = await this._employeeService.update(employeeId, employeeDto);
     if(employee)
@@ -101,7 +101,7 @@ export class AppController {
   @ApiResponse({ status: 403, description: "Unauthorized" })
   @ApiResponse({ status: 404, description: "Not found" })
   @ApiResponse({ status: 500, description: "Internal server error" })
-  async remove(@Param('employeeId') employeeId){
+  async remove(@Param('employeeId') employeeId:number){
     Logger.log("Remove an employee", "BlogController");
     const employee = await this._employeeService.remove(employeeId);
     if(employee)
