@@ -10,11 +10,10 @@ async function bootstrap() {
   .setTitle('Employees API')
   .setDescription('The SG Employees API')
   .setVersion('1.0')
-  .setBasePath('api')
+  .setBasePath('/')
   .addTag('employees')
   .build();
   const document = SwaggerModule.createDocument(app, options);
-  //app.setGlobalPrefix('api/v1');
   await SwaggerModule.setup('api', app, document);
   app.use('/static', express.static(__dirname + '/public'));
   await app.listen(3000);
