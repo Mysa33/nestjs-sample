@@ -3,11 +3,12 @@ import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
 import { AppModule } from './app.module';
 import "reflect-metadata";
 import express = require('express');
+import { ValidationPipe } from '@nestjs/common/pipes/validation.pipe';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   const options = new DocumentBuilder()
-  .setTitle('Employees API')
+  .setTitle('@ Employees API')
   .setDescription('The SG Employees API')
   .setVersion('1.0')
   .setBasePath('/')
@@ -16,6 +17,7 @@ async function bootstrap() {
   const document = SwaggerModule.createDocument(app, options);
   await SwaggerModule.setup('api', app, document);
   app.use('/static', express.static(__dirname + '/public'));
+  app.useGlobalPipes(new ValidationPipe());
   await app.listen(3000);
 }
 bootstrap();

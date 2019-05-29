@@ -3,8 +3,9 @@ import {Entity, PrimaryGeneratedColumn, Column, CreateDateColumn } from "typeorm
 @Entity()
 export class EmployeeEntity {
 
-    @PrimaryGeneratedColumn({name:'employee_id'})
-    id: string;
+
+    @PrimaryGeneratedColumn({name:'employee_id', type :'int'})
+    id: number;
 
     @Column()
     lastName: string;
@@ -12,7 +13,10 @@ export class EmployeeEntity {
     @Column()
     firstName: string;
 
-    @CreateDateColumn()
+    @Column()
+    email: string;
+
+    @CreateDateColumn({type:'timestamp'})
     createdAt: Date;
 
     @Column({type :'boolean', default: true})
