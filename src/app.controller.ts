@@ -2,7 +2,8 @@ import { Controller,Header, Get, Logger, Param, Post, Body, Put, Delete, HttpExc
 import { AppService } from './app.service';
 import { EmployeeDto } from './dtos/employee.dtos';
 import { ApiResponse, ApiOperation } from '@nestjs/swagger';
-@Controller()
+
+@Controller('employees')
 export class AppController {
   
   constructor(private readonly _employeeService: AppService) {}
