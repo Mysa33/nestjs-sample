@@ -4,22 +4,20 @@ import { NestFactory } from '@nestjs/core';
 import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
 import { AppModule } from './app.module';
 import "reflect-metadata";
-import express = require('express');
 import { ValidationPipe } from '@nestjs/common/pipes/validation.pipe';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   const options = new DocumentBuilder()
-    .setTitle('SG NestJS API demo')
-    .setDescription('SG NestJS API demo')
+    .setTitle('NestJS API')
+    .setDescription('NestJS API demo')
     .setVersion('1.0')
     .setContactEmail('example@sgcib.com')
     .setTermsOfService('Internal usage')
-    .setHost('localhost:9999/api/v1')
-    //.addOAuth2('implicit', oauth2Endpoint)
+    .setHost('localhost:3000')
     .build();
   // All api endpoints will be prefixed with "/api/"
-  app.setGlobalPrefix('api/v1');
+  //app.setGlobalPrefix('api');
   // Allow CORS requests
   app.use(cors({
     origin: '*',
@@ -39,7 +37,7 @@ async function bootstrap() {
     preflightContinue: false,
     optionsSuccessStatus: 204
   }));
-  app.use(noCache);
+  //app.use(Cache);
   const document = SwaggerModule.createDocument(app, options);
   await SwaggerModule.setup('api', app, document);
   app.use('/static', express.static(__dirname + '/public'));
