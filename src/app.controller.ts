@@ -5,6 +5,12 @@ import { ApiResponse, ApiOperation } from '@nestjs/swagger';
 
 @Controller('employees')
 export class AppController {
+  static getAll(): any {
+    throw new Error("Method not implemented.");
+  }
+  toBeDefined(): any {
+    throw new Error("Method not implemented.");
+  }
   
   constructor(private readonly _employeeService: AppService) {}
 

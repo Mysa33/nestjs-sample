@@ -41,7 +41,6 @@ async function bootstrap() {
   const document = SwaggerModule.createDocument(app, options);
   await SwaggerModule.setup('api', app, document);
   app.use('/static', express.static(__dirname + '/public'));
-  
   app.useGlobalPipes(new ValidationPipe());
   await app.listen(3000);
 }
