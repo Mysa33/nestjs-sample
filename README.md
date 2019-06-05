@@ -17,7 +17,7 @@
 ## Prequsites
 
   <div>
-    <div style="background-color:red!important;">
+    <div background = "red!important;">
       <span style="color:black!important;">Git</span>
       <span style="color:withe!important;">version 2</span>
     </div>

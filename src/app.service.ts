@@ -18,7 +18,7 @@ export class AppService {
     }
 
     async getOne(employeeId: number){
-      const employee = await this.employeeRepository.findOne(employeeId); 
+      const employee = await this.employeeRepository.findOne({ where: { id: employeeId} }); 
       if(employee){
         
         return employee;
