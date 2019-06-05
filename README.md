@@ -1,14 +1,18 @@
 <p align="center">
   <a href="" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="160" alt="Nest Logo" /></a>
 </p>
+<p align="center">
+  <img src="https://secure.icbdr.com/MediaManagement/QL/MD97XZ6P2MCJT3RRNQL.jpg">
+</p>
 
 [travis-image]: https://api.travis-ci.org/nestjs/nest.svg?branch=master
 [travis-url]: https://travis-ci.org/nestjs/nest
 [linux-image]: https://img.shields.io/travis/nestjs/nest/master.svg?label=linux
 [linux-url]: https://travis-ci.org/nestjs/nest
   
-  <p align="center">NestJS Sample <a href="http://nodejs.org" target="blank">Node.js</a> framework for building 
-  </p>
+<p align="center">
+  @DEX Nest Stater
+</p>
     
 
 
