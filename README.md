@@ -1,9 +1,11 @@
+
+<p align="center">
+  <img width="240" alt="Nest Logo" src="https://secure.icbdr.com/MediaManagement/QL/MD97XZ6P2MCJT3RRNQL.jpg">
+</p>
 <p align="center">
   <a href="" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="160" alt="Nest Logo" /></a>
 </p>
-<p align="center">
-  <img width="320" alt="Nest Logo" src="https://secure.icbdr.com/MediaManagement/QL/MD97XZ6P2MCJT3RRNQL.jpg">
-</p>
+
 
 [travis-image]: https://api.travis-ci.org/nestjs/nest.svg?branch=master
 [travis-url]: https://travis-ci.org/nestjs/nest
@@ -24,16 +26,19 @@
 
   <div>
     <div>
-      Git version 2 
+      <span>Git</span>
+      <span>version 2</span>
     </div>
     <div>
-      NodeJS version 10 
+      <span>NodeJS</span>
+      <span>version 10</span>
     </div>
     <div>
-      Nest-cli version 6
+      <span>Nest-cli</span>
+      <span>version 6</span>
     </div>
     <div>
-      MySqlServer
+      <span>MySqlServer</span>
     </div>
     <div>
       Define NODE_ENV global variable.
@@ -42,13 +47,28 @@
 
 ## Stack and main dependencies
 
-JavaScript ES6
-TypeScript version 3
-Nestjs version 6
-Jest version 23
-Dotenv version 8
-TypeOrm 0.2
-
+<div>
+  <div>
+    <span>JavaScript</span>
+    <span>ES6</span>
+  </div>
+  <div>
+    <span>TypeScript</span>
+    <span>version 3</span>
+  </div>
+  <div>
+    <span>Nestjs</span>
+    <span>version 6</span>
+  </div>
+  <div>
+    <span>Jest</span>
+    <span>version 23</span>
+  </div>
+  <div>
+    <span>TypeOrm </span>
+    <span>version 0.2</span>
+  </div>
+</div>
 
 ## Installation
 
