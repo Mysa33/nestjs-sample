@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="160" alt="Nest Logo" /></a>
+  <a href="" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="160" alt="Nest Logo" /></a>
 </p>
 
 [travis-image]: https://api.travis-ci.org/nestjs/nest.svg?branch=master
@@ -10,12 +10,29 @@
   <p align="center">NestJS Sample <a href="http://nodejs.org" target="blank">Node.js</a> framework for building 
   </p>
     
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+
 
 ## Description
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+
+## Prequsites
+
+Git version 2 
+NodeJS version 10
+Nest-cli version 6
+MySqlServer
+Define NODE_ENV global variable.
+
+## Stack and main dependencies
+
+JavaScript ES6
+TypeScript version 3
+Nestjs version 6
+Jest version 23
+Dotenv version 8
+TypeOrm 0.2
+
 
 ## Installation
 
