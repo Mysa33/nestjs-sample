@@ -1,11 +1,12 @@
 
 <p align="center">
   <img width="160" alt="Nest Logo" src="https://secure.icbdr.com/MediaManagement/QL/MD97XZ6P2MCJT3RRNQL.jpg">
-  <a href="" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="160" alt="Nest Logo" /></a>
 </p>
   
 <p align="center">
-  @DEX Nest Stater
+  <span>@DEX</span>
+  <img src="https://nestjs.com/img/logo_text.svg" width="160" alt="Nest Logo" />
+  <span>Stater</span> 
 </p>
 
 ## Description
