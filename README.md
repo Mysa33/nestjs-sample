@@ -2,7 +2,7 @@
   <a href="" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="160" alt="Nest Logo" /></a>
 </p>
 <p align="center">
-  <img src="https://secure.icbdr.com/MediaManagement/QL/MD97XZ6P2MCJT3RRNQL.jpg">
+  <img width="320" alt="Nest Logo" src="https://secure.icbdr.com/MediaManagement/QL/MD97XZ6P2MCJT3RRNQL.jpg">
 </p>
 
 [travis-image]: https://api.travis-ci.org/nestjs/nest.svg?branch=master
