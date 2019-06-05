@@ -4,8 +4,9 @@
 </p>
   
 <p align="center">
-  <span>@DEX</span>
   <img src="https://nestjs.com/img/logo_text.svg" width="160" alt="Nest Logo" />
+  <br>
+  <span>@DEX</span>
   <span>Stater</span> 
 </p>
 
@@ -16,9 +17,9 @@
 ## Prequsites
 
   <div>
-    <div style="background-color:red;">
-      <span style="color:black;">Git</span>
-      <span style="color:withe;">version 2</span>
+    <div style="background-color:red!important;">
+      <span style="color:black!important;">Git</span>
+      <span style="color:withe!important;">version 2</span>
     </div>
     <div>
       <span>NodeJS</span>
