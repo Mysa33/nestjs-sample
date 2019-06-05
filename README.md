@@ -18,11 +18,23 @@
 
 ## Prequsites
 
-Git version 2 
-NodeJS version 10
-Nest-cli version 6
-MySqlServer
-Define NODE_ENV global variable.
+  <div>
+    <div>
+      Git version 2 
+    </div>
+    <div>
+      NodeJS version 10 
+    </div>
+    <div>
+      Nest-cli version 6
+    </div>
+    <div>
+      MySqlServer
+    </div>
+    <div>
+      Define NODE_ENV global variable.
+    </div>
+  </div>
 
 ## Stack and main dependencies
 
