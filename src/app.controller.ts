@@ -1,16 +1,12 @@
 import { Controller,Header, Get, Logger, Param, Post, Body, Put, Delete, HttpException, HttpStatus } from '@nestjs/common';
 import { AppService } from './app.service';
 import { EmployeeDto } from './dtos/employee.dtos';
-import { ApiResponse, ApiOperation } from '@nestjs/swagger';
+import { EmployeeEntity } from '../src/entities/employee.entity';
+import { ApiResponse, ApiOperation, ApiImplicitParam, ApiUseTags } from '@nestjs/swagger';
 
+@ApiUseTags('Employees')
 @Controller('employees')
 export class AppController {
-  static getAll(): any {
-    throw new Error("Method not implemented.");
-  }
-  toBeDefined(): any {
-    throw new Error("Method not implemented.");
-  }
   
   constructor(private readonly _employeeService: AppService) {}
 
@@ -22,7 +18,12 @@ export class AppController {
     title: 'Get all',
     operationId: 'GET /employees'
   })
-  @ApiResponse({ status: 200, description: 'Get all employees' })
+  @ApiResponse({ 
+    status: 200, 
+    description: 'Get all employees',
+    type: EmployeeEntity,
+    isArray:true 
+  })
   @ApiResponse({ status: 403, description: "Unauthorized" })
   @ApiResponse({ status: 404, description: "Not found" })
   @ApiResponse({ status: 500, description: "Internal server error" })
@@ -32,20 +33,27 @@ export class AppController {
   }
 
   //Get one
-  @Get(':emplyeeId')
+  @Get(':employeeId')
   @Header('Cache-Control', 'none')
   @ApiOperation({
     description: 'Get one employee',
     title: 'Get one',
     operationId: 'GET /employees'
   })
-  @ApiResponse({ status: 200, description: 'Get an employees' })
+  @ApiResponse({ 
+    status: 200, 
+    description: 'Get an employees',
+    type: EmployeeEntity,
+    isArray:false
+  })
   @ApiResponse({ status: 400, description: "Missing info: employeeId" })
   @ApiResponse({ status: 403, description: "Unauthorized" })
   @ApiResponse({ status: 404, description: "Not found" })
   @ApiResponse({ status: 500, description: "Internal server error" })
+  @ApiImplicitParam({name :'employeeId', description:'Return an employee by id', required:true})
   async getOne(@Param('employeeId') employeeId:number) {
     Logger.log("get one employee", "AppController");
+    console.log("employeeId :", employeeId);
     const employee = await this._employeeService.getOne(employeeId);
     if(employee){
       return employee;
@@ -62,7 +70,12 @@ export class AppController {
     title: 'Create one',
     operationId: 'POST /employees'
   })
-  @ApiResponse({ status: 200, description: 'Create an employees' })
+  @ApiResponse({ 
+    status: 200, 
+    description: 'Create an employees',
+    type: EmployeeDto,
+    isArray:true
+  })
   @ApiResponse({ status: 400, description: "Missing info: employeeId" })
   @ApiResponse({ status: 403, description: "Unauthorized" })
   @ApiResponse({ status: 404, description: "Not found" })
@@ -88,7 +101,7 @@ export class AppController {
   @ApiResponse({ status: 403, description: "Unauthorized" })
   @ApiResponse({ status: 404, description: "Not found" })
   @ApiResponse({ status: 500, description: "Internal server error" })
-  async update(@Param('employeeId')employeeId, @Body() employeeDto:EmployeeDto){
+  async update(@Param('employeeId') employeeId:number, @Body() employeeDto:EmployeeDto){
     Logger.log("Update an employee", "AppController");
     const employee = await this._employeeService.update(employeeId, employeeDto);
     if(employee)

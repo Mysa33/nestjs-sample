@@ -7,7 +7,7 @@
   <img src="https://nestjs.com/img/logo_text.svg" width="160" alt="Nest Logo" />
   <br>
   <span>@DEX</span>
-  <span>Stater</span> 
+  <span>Starter</span> 
 </p>
 
 ## Description

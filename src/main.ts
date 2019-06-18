@@ -17,7 +17,7 @@ async function bootstrap() {
     .setHost('localhost:3000')
     .build();
   // All api endpoints will be prefixed with "/api/"
-  //app.setGlobalPrefix('api');
+  //app.setGlobalPrefix('/api/v1/');
   // Allow CORS requests
   app.use(cors({
     origin: '*',

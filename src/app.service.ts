@@ -1,5 +1,4 @@
 import { Injectable, HttpException, HttpStatus } from '@nestjs/common';
-import { Logger } from '@nestjs/common'
 import { Repository } from 'typeorm';
 import {EmployeeEntity} from './entities/employee.entity';
 import { InjectRepository } from '@nestjs/typeorm';
@@ -18,9 +17,8 @@ export class AppService {
     }
 
     async getOne(employeeId: number){
-      const employee = await this.employeeRepository.findOne({ where: { id: employeeId} }); 
+      const employee = await this.employeeRepository.findOne(employeeId); 
       if(employee){
-        
         return employee;
       }else{
         throw new HttpException('Not found', HttpStatus.NOT_FOUND);
