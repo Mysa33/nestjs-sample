@@ -1,15 +1,3 @@
-
-<p align="center">
-  <img width="160" alt="Nest Logo" src="https://secure.icbdr.com/MediaManagement/QL/MD97XZ6P2MCJT3RRNQL.jpg">
-</p>
-  
-<p align="center">
-  <img src="https://nestjs.com/img/logo_text.svg" width="160" alt="Nest Logo" />
-  <br>
-  <span>@DEX</span>
-  <span>Starter</span> 
-</p>
-
 ## Description
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
